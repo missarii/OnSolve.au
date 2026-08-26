@@ -1,0 +1,11 @@
+#!/bin/bash
+# Run the OnSolve website on http://localhost:3000
+cd "$(dirname "$0")"
+
+if [ ! -d node_modules ]; then
+  echo "Installing dependencies..."
+  npm install
+fi
+
+echo "Starting dev server on http://localhost:3000 ..."
+npm run dev
